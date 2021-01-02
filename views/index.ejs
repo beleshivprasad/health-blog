@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: 'Raleway';
+            font-size: 16px;
+            line-height: 1.8em;
+        }
+
+        a {
+            color: #1C9C94;
+            text-decoration: none;
+        }
+
+        a:hover {
+            opacity: 0.5;
+        }
+
+        article {
+            padding: 0 1em;
+        }
+
+        section {
+            margin: 1em;
+            padding: 1em;
+        }
+
+        header,
+        footer {
+            margin: 0 auto;
+        }
+
+
+        header {
+            padding: 2em;
+            text-align: center;
+            background-image: url('./../public/images/blur-blurred-dark-1526.jpg');
+            background-size: cover;
+            background-position: fixed;
+            height: 100vh;
+            color: white;
+        }
+
+        header section {
+            margin: 0 auto;
+            max-width: 640px;
+        }
+
+
+        main {
+            height: 100vh;
+        }
+        footer {
+            padding: 1em 1.5em;
+            background: #A7B8BF;
+            color: white;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 768px) {
+ 
+        }
+
+        @media only screen and (max-width: 576px) {
+
+
+            footer {
+                text-align: center;
+            }
+        }
+
+        .nav a {
+            color: whitesmoke;
+            padding: 20px 30px;
+        }
+
+        .nav {
+            height: 50px;
+            margin: 0px;
+            padding: 0px;
+            text-align: left;
+        }
+        ul{
+            height: 50px;
+            margin: 0px;
+            padding: 0px;
+            background-color:black;
+            background-attachment: fixed;
+        }
+        ul li {
+           
+            display:inline-block;
+        }
+        .blogcont{
+            display: flex;
+        }
+        .blog{
+            height: 300px;
+            width: 300px;
+            margin: auto auto;
+            margin-top: 100px;
+            background-color: lightgray;
+            border:2px solid black;
+            border-radius: 20px;
+            text-align: center;
+            padding:auto auto;
+        }
+        .blog h2 {
+            margin-top: calc(50% - 20px);
+        }
+        .logo{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="nav">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <%if(logged){%>
+                    <li><a href="/logout">logout</a></li>
+                <%}else{%>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+                <%}%>
+            </ul>
+        </nav>
+    </header>
+    <div class="logo">
+        <h1>Welcome To HBcare</h1>
+        <p>Only Platform to give information about real health problems,issues with solutionss</p>
+    </div>
+    <main >
+        <div class="blogcont">
+            <div class="blog">
+                <h2><a href="/blog1">How to stay Fit</a></h2> 
+            </div>
+            <div class="blog">
+                <h2><a href="/blog2">Diet Plan for Indians?</a></h2> 
+            </div>
+            <div class="blog">
+                <h2><a href="/blog3">What is an emergency health kit?</a></h2> 
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <h2>Contact</h2>
+        <p><strong>Adress : </strong>Sangli,Maharashtra 416 415</p>
+        <p><strong>Email : </strong><a href="mailto:shivprasadoctomusprime">shivprasadoctomusprime@gmail.com</a></p>
+        <p><strong>Phone : +91-9284245945</strong></p>
+        <p><a href="#">Go to</a></p>
+      </footer>
+</body>
+
+</html>
+</div>

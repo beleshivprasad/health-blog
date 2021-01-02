@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to stay fit?</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Raleway';
+            font-size: 16px;
+            line-height: 1.8em;
+        }
+
+        a {
+            color: #1C9C94;
+            text-decoration: none;
+        }
+
+        a:hover {
+            opacity: 0.5;
+        }
+
+        article {
+            padding: 0 1em;
+        }
+
+        section {
+            margin: 1em;
+            padding: 1em;
+        }
+
+        header,
+        footer {
+            margin: 0 auto;
+        }
+
+
+        header {
+            padding: 2em;
+            text-align: center;
+            background-image: url('./../public/images/blur-blurred-dark-1526.jpg');
+            background-size: cover;
+            background-position: fixed;
+            height: 100vh;
+            color: white;
+        }
+
+        header section {
+            margin: 0 auto;
+            max-width: 640px;
+        }
+
+
+        main {
+            height: 100vh;
+        }
+
+        footer {
+            padding: 1em 1.5em;
+            background: #A7B8BF;
+            color: white;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 768px) {}
+
+        @media only screen and (max-width: 576px) {
+
+
+            footer {
+                text-align: center;
+            }
+        }
+
+        .nav a {
+            color: whitesmoke;
+            padding: 20px 30px;
+        }
+
+        .nav {
+            height: 50px;
+            margin: 0px;
+            padding: 0px;
+            text-align: left;
+        }
+
+        ul {
+            height: 50px;
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            background-attachment: fixed;
+        }
+
+        ul li {
+
+            display: inline-block;
+        }
+
+        .blogcont {
+            display: flex;
+        }
+
+        .blog {
+            height: 300px;
+            width: 300px;
+            margin: auto auto;
+            margin-top: 100px;
+            background-color: lightgray;
+            border: 2px solid black;
+            border-radius: 20px;
+            text-align: center;
+            padding: auto auto;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .rate {
+            margin: 20px calc(50% - 150px);
+        }
+
+        .links {
+            display: flex;
+            height: auto;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: lightblue;
+            color: white;
+        }
+
+        .links li {
+            display: block;
+        }
+
+        #table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #table td,
+        #table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #table tr:hover {
+            background-color: #ddd;
+        }
+
+        #table th {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: left;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="nav">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <%if(logged){%>
+                    <li><a href="/logout">logout</a></li>
+                    <%}else{%>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+                        <%}%>
+            </ul>
+        </nav>
+    </header>
+    <div class="logo">
+        <h1>Welcome To HBcare</h1>
+        <p>Only Platform to give information about real health problems,issues with solutionss</p>
+    </div>
+    <div>
+        <ul class="links">
+            <li><a href="/blog1">How to stay fit?</a></li>
+            <li><a href="/blog2">Diet plan for indians</a></li>
+            <li><a href="/blog3">What is an emergency health kit?</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <h1>How to stay fit?</h1>
+        <p>
+            Exercise daily for at least an hour. You do not have to kill yourself from running, jogging, etc., but you
+            should have some sort of moderate physical activity in your everyday life. If you're looking to shed a few
+            pounds fast, do a higher-level intensity workout. For example, go on a walk at a brisk pace for an hour. Or,
+            you can jog and set certain intervals to sprint during that hour. Make sure you're not in severe pain during
+            your workout. Just a warning, your muscles will ache after a high intensity workout. It may be irritating,
+            but that means your body is changing for the better. Be sure to stay hydrated, stretch, and eat foods with a
+            decent amount of protein after each workout. The protein will help keep your muscles, not fat, rebuilding.
+        </p>
+        <p>
+            No matter how bad your stomach is telling you to go for candy over healthy food, try to stay away from
+            sweets. Sugar from candy will not help you get in shape. Even if it's just a single candy bar, one will
+            eventually lead to another. Fruits and vegetables are the best thing to eat when getting into shape. Apples,
+            for example, do a good job at making the stomach feel full for up to 3 to 4 hours. Green vegetables such as
+            green beans and broccoli keep the digestive system clean and running.
+            Also, stick to lean meats like turkey and chicken. Seafood, such as, shrimp, and tilapia are also great
+            alternatives. These foods are full of protein and healthy nutrients to help keep muscles fit and ready for
+            workouts. In addition, be sure to portion what you eat. Having a good metabolism comes from portioning
+            meals. Try to plan out eating six times a day and setting smaller portions, rather than having three large
+            meals throughout the day. This will also help you find yourself breathing smoother when working out rather
+            than huffing and puffing for air. This is because you will have less food in your digestive system, which
+            means more energy is used toward your exercise.
+        </p>
+    </div>
+    <div class="rate">
+        <table id="table">
+            <tr>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>feedback</th>
+            </tr>
+            <tr>
+                <%if(rates){%>
+                    <% for(let i = 0 ; i < rating.length ; i++){%>
+                        <td><%=rating[i].email%></td>
+                        <td><%=rating[i].rate%></td>
+                        <td><%=rating[i].feedback%></td>
+                    <% }%>
+                <%}%>
+            </tr>
+        </table><br><br>
+        <form action="/blog1/rate" method="POST">
+            <strong>Rate:</strong><br>
+            <input type="number" min="1" max="5" name="rate" required><br>
+            <textarea name="feed" cols="30" rows="10" required></textarea><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <footer id="footer">
+        <h2>Contact</h2>
+        <p><strong>Adress : </strong>Sangli,Maharashtra 416 415</p>
+        <p><strong>Email : </strong><a href="mailto:shivprasadoctomusprime">shivprasadoctomusprime@gmail.com</a></p>
+        <p><strong>Phone : +91-9284245945</strong></p>
+        <p><a href="#">Go to</a></p>
+    </footer>
+</body>
+
+</html>
+</div>

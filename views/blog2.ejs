@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan for Indians?</title>
+    <style>
+
+        body {
+            margin: 0;
+            font-family: 'Raleway';
+            font-size: 16px;
+            line-height: 1.8em;
+        }
+
+        a {
+            color: #1C9C94;
+            text-decoration: none;
+        }
+
+        a:hover {
+            opacity: 0.5;
+        }
+
+        article {
+            padding: 0 1em;
+        }
+
+        section {
+            margin: 1em;
+            padding: 1em;
+        }
+
+        header,
+        footer {
+            margin: 0 auto;
+        }
+
+
+        header {
+            padding: 2em;
+            text-align: center;
+            background-image: url('./../public/images/blur-blurred-dark-1526.jpg');
+            background-size: cover;
+            background-position: fixed;
+            height: 100vh;
+            color: white;
+        }
+
+        header section {
+            margin: 0 auto;
+            max-width: 640px;
+        }
+
+
+        main {
+            height: 100vh;
+        }
+        footer {
+            padding: 1em 1.5em;
+            background: #A7B8BF;
+            color: white;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 768px) {
+ 
+        }
+
+        @media only screen and (max-width: 576px) {
+
+
+            footer {
+                text-align: center;
+            }
+        }
+
+        .nav a {
+            color: whitesmoke;
+            padding: 20px 30px;
+        }
+
+        .nav {
+            height: 50px;
+            margin: 0px;
+            padding: 0px;
+            text-align: left;
+        }
+        ul{
+            height: 50px;
+            margin: 0px;
+            padding: 0px;
+            background-color:black;
+            background-attachment: fixed;
+        }
+        ul li {
+           
+            display:inline-block;
+        }
+        .blogcont{
+            display: flex;
+        }
+        .blog{
+            height: 300px;
+            width: 300px;
+            margin: auto auto;
+            margin-top: 100px;
+            background-color: lightgray;
+            border:2px solid black;
+            border-radius: 20px;
+            text-align: center;
+            padding:auto auto;
+        }
+        .logo{
+            text-align: center;
+        }
+        .rate{
+            margin: 20px calc(50% - 150px);
+        }
+        .links{
+            display: flex;
+            height: auto;
+            justify-content: space-between;
+            padding: 20px;
+            background-color:lightblue;
+            color:white;
+        }
+        .links li {
+            display: block;
+        }
+        #table td,
+        #table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #table tr:hover {
+            background-color: #ddd;
+        }
+
+        #table th {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: left;
+            background-color: black;
+            color: white;
+        }
+        #table td {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: left;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <%if(logged){%>
+                    <li><a href="/logout">logout</a></li>
+                    <%}else{%>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+                    <%}%>
+            </ul>
+        </nav>
+    </header>
+    <div class="logo">
+        <h1>Welcome To HBcare</h1>
+        <p>Only Platform to give information about real health problems,issues with solutionss</p>
+    </div>
+    <div>
+        <ul class="links">
+            <li><a href="/blog1">How to stay fit?</a></li>
+            <li><a href="/blog2">Diet plan for indians</a></li>
+            <li><a href="/blog3">What is an emergency health kit?</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <h1>Diet Plan for Indians?</h1>
+        <p>
+            Weight loss and gain, revolve around caloric consumption and expenditure. You lose weight when you consume fewer calories than you expend. Conversely, you gain weight when you consume more calories than you expend. To drop those excess kilos, all you need to do is eat within your calorie budget and burn the required number of calories. A combination of the two works best suggest experts. Get your daily requirement of calorie consumption and burn based on your lifestyle and dietary preferences, by signing up on HealthifyMe.
+
+        </p>
+        <p>    
+            However, simply determining how many calories your body needs isn’t enough. After all, four samosas (600 calories), two slices of pizza (500 calories) and two gulab jamuns (385 calories) may be within your daily requirement of 1500 calories, but these unhealthy food choices will eventually lead to other health problems like high cholesterol and blood sugar. To lose weight the healthy way, you also need to ensure your diet is balanced i.e. it covers all food groups and provides all the nutrients you need necessary for good health.
+        </p>
+    </div>
+    <div class="rate">
+        <table id="table">
+            <tr>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>feedback</th>
+            </tr>
+            <tr>
+                <%if(rates){%>
+                    <% for(let i = 0 ; i < rating.length ; i++){%>
+                        <td><%=rating[i].email%></td>
+                        <td><%=rating[i].rate%></td>
+                        <td><%=rating[i].feedback%></td>
+                    <% }%>
+                <%}%>
+            </tr>
+        </table><br><br>
+        <form action="/blog2/rate" method="POST">
+            <strong>Rate:</strong><br>
+            <input type="number" min="1" max="5" name="rate"><br>
+            <textarea name="feed" cols="30" rows="10"></textarea><br>
+            <input type="submit" value = "submit">
+        </form>
+    </div>
+    <footer id="footer">
+        <h2>Contact</h2>
+        <p><strong>Adress : </strong>Sangli,Maharashtra 416 415</p>
+        <p><strong>Email : </strong><a href="mailto:shivprasadoctomusprime">shivprasadoctomusprime@gmail.com</a></p>
+        <p><strong>Phone : +91-9284245945</strong></p>
+        <p><a href="#">Go to</a></p>
+      </footer>
+</body>
+</html></div>
